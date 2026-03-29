@@ -68,7 +68,7 @@ for i, student in enumerate(students):
     status, last_time = cursor.fetchone()
 
     # ⏰ 12 hour reset (change here if needed)
-    if status == 1 and (current_time - last_time > 60):
+    if status == 1 and (current_time - last_time > 43200):
         status = 0
         cursor.execute(
             "UPDATE students SET status=?, last_time=? WHERE name=? AND day=?",
