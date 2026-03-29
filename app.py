@@ -1,10 +1,10 @@
 import streamlit as st
 import sqlite3
 import time
-import pyttsx3
+# import pyttsx3
 
 # Voice
-engine = pyttsx3.init()
+# engine = pyttsx3.init()
 
 st.set_page_config(page_title="Student Tracker", layout="centered")
 
@@ -112,10 +112,10 @@ with colB:
 st.markdown("---")
 
 # 🔊 Speaker
-if st.button("🔊 Speak Report"):
+if st.button(""):
     text = f"{len(done_list)} students completed and {len(not_done_list)} did not complete."
-    engine.say(text)
-    engine.runAndWait()
+    # engine.say(text)
+    # engine.runAndWait()
 
 # Manual reset button
 if st.button("♻️ Reset All"):
